@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/330a21053c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Employees List</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <div class="row header">
+            <div class="header-left">
+                <i class="fa-regular fa-user"></i>
+                <span>Empoyees</span>
+            </div>
+            <div class="header-right">
+                <span class="welcome">Welcome 999</span>
+                <div class="header-right-action">
+                    <a href="#modal-login">Login</a>
+                </div>
+                <!-- <div class="header-right-action">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Log out</span>
+                </div> -->
+            </div>
+
+        </div>
+        <!-- end header -->
+
+        <!-- Body -->
+        <div class="body">
+            <div class="row">
+                <div class="body-left">
+                    <ul class="navigation">
+                        <li class="navigation-item"><i class="fa-solid fa-table-columns"></i><span>Dashboard</span></li>
+                        <li class="navigation-item">
+                            <div id="dropdown">
+                                <div class="dropdown-btn"> <i class="fa-solid fa-list-check"></i><span>Employee
+                                        Manager</span>
+                                    <i class="fa-solid fa-angle-down down"></i>
+                                </div>
+
+                                <div class="dropdown-contents">
+                                    <div class="dropdown-content active">
+                                        <i class="fa-solid fa-table-list"></i><span>Employee list</span>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <i class="fa-solid fa-plus"></i><span>Add Employee</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="body-right">
+                    <div class="employee-list employee-action active">
+                        <h2 class="body-right-title">Employee list</h2>
+                        <div class="body-right-nav">
+                            <div class="search">
+                                <span class="fa-solid fa-magnifying-glass"></span>
+                                <input type="text" placeholder="User search">
+                            </div>
+                            <div class="filter">
+                                <i class="fa-solid fa-filter"></i>
+                                <span>Filter by</span>
+
+                                <select id="filter-types">
+                                    <option value="filter-type" selected>Name</option>
+                                    <option value="filter-type">AAA</option>
+                                    <option value="filter-type">BBB</option>
+                                    <option value="filter-type">CCCCC</option>
+                                </select>
+                            </div>
+                            <div class="search-button">
+                                <a href="">Search</a>
+                            </div>
+                        </div>
+                        <!-- table -->
+                        <table>
+                            <!-- header -->
+                            <tr>
+                                <th class="table-header">ID</th>
+                                <th class="table-header">Name</th>
+                                <th class="table-header">Date of birth</th>
+                                <th class="table-header">Phone number</th>
+                                <th class="table-header">Department</th>
+                                <th class="table-header">Action</th>
+                            </tr>
+                            <!-- data -->
+                            <tr>
+                                <td class="table-data">1</td>
+                                <td class="table-data">Nguyễn Linh</td>
+                                <td class="table-data">1990-10-2</td>
+                                <td class="table-data">1111111</td>
+                                <td class="table-data">Bien Hoa</td>
+                                <td class="table-data"><a href=""><i class="fa-regular fa-eye"></i>View</a></td>
+                            </tr>
+                            <!-- data -->
+                            <tr>
+                                <td class="table-data">1</td>
+                                <td class="table-data">Nguyễn Linh</td>
+                                <td class="table-data">1990-10-2</td>
+                                <td class="table-data">1111111</td>
+                                <td class="table-data">Bien Hoa</td>
+                                <td class="table-data"><a href=""><i class="fa-regular fa-eye"></i>View</a></td>
+                            </tr><!-- data -->
+                            <tr>
+                                <td class="table-data">1</td>
+                                <td class="table-data">Nguyễn Linh</td>
+                                <td class="table-data">1990-10-2</td>
+                                <td class="table-data">1111111</td>
+                                <td class="table-data">Bien Hoa</td>
+                                <td class="table-data"><a href=""><i class="fa-regular fa-eye"></i>View</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="add-employee employee-action">
+                        <h2 class="body-right-title">Add employee</h2>
+                        <form action="" id="add-form">
+                            <div class="form-item">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" placeholder="First Name">
+                            </div>
+                            <!-- last name -->
+                            <div class="form-item">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" placeholder="Last Name">
+                            </div>
+                            <!-- phone -->
+                            <div class="form-item">
+                                <label for="phone-number">Phone number</label>
+                                <input type="text" id="phone-number" placeholder="Phone number">
+                            </div>
+                            <!-- dob -->
+                            <div class="form-item">
+                                <label for="dob">Date of birth</label>
+                                <input type="date" id="dob">
+                            </div>
+                            <!-- phone -->
+                            <div class="form-item">
+                                <p>Gender</p>
+                                <label for="male">Male</label>
+                                <input type="radio" id="male" name="gender-radio" value="Male">
+                                <label for="female">Female</label>
+                                <input type="radio" id="female" name="gender-radio" value="Female">
+                            </div>
+                            <!-- account -->
+                            <div class="form-item">
+                                <label for="account">Account</label>
+                                <input type="text" id="account" placeholder="Account">
+                            </div>
+                            <!-- email -->
+                            <div class="form-item">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Email">
+                            </div>
+                            <!-- password -->
+                            <div class="form-item">
+                                <label for="pw">Phone number</label>
+                                <input type="password" id="pw" placeholder="Password">
+                            </div>
+                            <!-- address -->
+                            <div class="form-item">
+                                <label for="address">Address</label>
+                                <textarea id="address" placeholder="Address"></textarea>
+                            </div>
+                            <!-- status -->
+                            <div class="form-item">
+                                <p>Status</p>
+                                <input type="checkbox" id="status">
+                                <label for="status">Active</label>
+                            </div>
+                            <!-- address -->
+                            <div class="form-item">
+                                <label for="departments">Department</label>
+                                <select id="departments">
+                                    <option value="departments-type" selected>AA</option>
+                                    <option value="departments-type">AAAAA</option>
+                                    <option value="departments-type">BAAAAAAAAAAACC</option>
+                                </select>
+                            </div>
+                            <!-- remark -->
+                            <div class="form-item">
+                                <label for="remark">Remark</label>
+                                <textarea id="remark" placeholder="Remark"></textarea>
+                            </div>
+                            <button class="btn-action back"><i class="fa-solid fa-backward"></i>Back</button>
+                            <button class="btn-action reset"><i class="fa-solid fa-arrow-rotate-left"></i>Reset</button>
+                            <button class="btn-action plus"><i class="fa-solid fa-plus"></i>Plus</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assets/index.js"></script>
+
+</html>
